@@ -39,22 +39,23 @@
                     <div class="width-one-whole spid-logo"><img src="img/spid-level3-logo-bb.svg" onerror="this.src='img/spid-level3-logo-bb.png'; this.onerror=null;" alt="SPID 3" /></div>
                 </div>
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-title">pubblica amministrazione</div>
+                    <div class="width-one-whole pa-title">[ NOME SERVICE PROVIDER ]</div>
                 </div>
                 <div class="grid spacer-top-1">
                     <div class="width-one-whole"><span class="spid-hr"></span></div>
                 </div>
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-message">Per accedere al servizio richiesto è necessario l'utilizzo dei seguenti dati personali:</div>
+                    <div class="width-one-whole pa-message">Per accedere al servizio richiesto è necessario l'utilizzo dei seguenti attributi:</div>
                 </div>
                 <!-- SPID LOGIN FORM * begin * -->
                 <form name="spid-login" id="spid-login" action="#" method="post" class="grid">
                     <div class="width-one-whole">         
                         <div class="width-one-whole pa-message">         
                             <ul>
-                                <li>Nome: Mario</li>
-                                <li>Cognome: Rossi</li>
-                                <li>Codice Fiscale: AAABBB00C00D000E</li>
+                                <li>Nome</li>
+                                <li>Cognome</li>
+                                <li>Codice Fiscale</li>
+                                <li>...</li>
                             </ul>
                         </div>
                         <button type="submit" class="italia-it-button italia-it-button-size-m button-spid spacer-top-3">
@@ -65,7 +66,12 @@
                 </form>
                 <!-- SPID LOGIN FORM * end * -->
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole push-right spid-link"><a href="#">Annulla</a></div>
+                    <div class="width-one-whole push-right spid-link">
+                        <a href="#">
+                            Annulla 
+                            <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
+                        </a>
+                    </div>
                 </div>
             </div>
 	     </div>
@@ -81,30 +87,5 @@
         </div>
     </div>    
     <script src="js/jquery.min.js"></script>
-    <script>
-        (function ($) {
-            $.showPassword = function (options) {
-                var settings = $.extend({
-                    field: "#password",
-                    control: "#show_password",
-                }, options);
-
-                var control = $(settings.control);
-                var field = $(settings.field)
-
-                control.bind('click', function () {
-                    if (control.is(':checked')) {
-                        field.attr('type', 'text');
-                    } else {
-                        field.attr('type', 'password');
-                    }
-              })
-            };
-            }(jQuery));
-            $.showPassword({
-            field: '#password',
-            control: '#show_password'
-        });
-    </script>
 </body>
 </html>

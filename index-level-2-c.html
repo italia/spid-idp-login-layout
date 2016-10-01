@@ -32,27 +32,32 @@
     <![endif]-->
 </head>
 <body>
-    
     <div id="outer">
-	<div id="contain-all">
+    <div id="contain-all">
             <div class="inner">
                 <div class="grid spacer-top-1">
                     <div class="width-one-whole spid-logo"><img src="img/spid-level2-logo-bb.svg" onerror="this.src='img/spid-level2-logo-bb.png'; this.onerror=null;" alt="SPID 2" /></div>
                 </div>
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-title">pubblica amministrazione</div>
+                    <div class="width-one-whole pa-title">[ NOME SERVICE PROVIDER ]</div>
                 </div>
                 <div class="grid spacer-top-1">
                     <div class="width-one-whole"><span class="spid-hr"></span></div>
                 </div>
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-message">Per accedere al servizio è richiesta l'immissione del codice temporaneo ricevuto via sms.</div>
+                    <div class="width-one-whole pa-message">Per accedere al servizio è richiesta l'inserimento del codice temporaneo (otp) ricevuto via sms/app (modificare)....</div>
                 </div>
                 <!-- SPID LOGIN FORM * begin * -->
                 <form name="spid-login" id="spid-login" action="#" method="post" class="grid">
-                    <div class="width-one-whole">         
+                    <div class="width-one-whole spacer-top-3">         
                         <fieldset>
-                            <label for="codice" class="float-left label-bold">Codice</label><span class="forgot-link"><a href="#">Codice non ricevuto ?</a></span>
+                            <label for="codice" class="float-left label-bold">Codice</label>
+                            <span class="forgot-link">
+                                <a href="#">
+                                    Non hai ricevuto il codice?
+                                    <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
+                                </a>
+                            </span>
                             <input id="codice" name="codice" type="text" value=""><span class="clear"></span>
                         </fieldset>
                         <button type="submit" class="italia-it-button italia-it-button-size-m button-spid spacer-top-3">
@@ -63,10 +68,15 @@
                 </form>
                 <!-- SPID LOGIN FORM * end * -->
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole push-right spid-link"><a href="#">Annulla</a></div>
+                    <div class="width-one-whole push-right spid-link">
+                        <a href="#">
+                            Annulla
+                            <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
+                        </a>
+                    </div>
                 </div>
             </div>
-	    </div>
+        </div>
     </div>
     <div id="header">
         <div id="header-inner">
@@ -74,48 +84,10 @@
         </div>
     </div>
     <div id="footer">
-	<div id="footer-inner">
+    <div id="footer-inner">
             <a href="http://www.spid.gov.it/check"><img id="spid-agid-logo" src="img/spid-agid-logo-bb.svg" onerror="this.src='img/spid-agid-logo-bb.png'; this.onerror=null;" alt="SPID - AgID Agenzia per l'Italia Digitale - Check" /></a>
         </div>
     </div>
-    
     <script src="js/jquery.min.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script>
-        document.querySelector('#spid-level1-message').onclick = function(){
-          swal({
-            title: '<img id="spid-logo" src="img/spid-uno-logo.svg" alt="SPID 1" title="Il servizio richiede l\'autenticazione SPID di Livello 1" />',
-            text: 'Il livello 1....',
-            html: true,
-            allowEscapeKey: true,
-            allowOutsideClick: true
-          });
-        };
-        
-        (function ($) {
-            $.showPassword = function (options) {
-                var settings = $.extend({
-                    field: "#password",
-                    control: "#show_password",
-                }, options);
-
-                var control = $(settings.control);
-                var field = $(settings.field)
-
-                control.bind('click', function () {
-                    if (control.is(':checked')) {
-                        field.attr('type', 'text');
-                    } else {
-                        field.attr('type', 'password');
-                    }
-              })
-            };
-            }(jQuery));
-            $.showPassword({
-            field: '#password',
-            control: '#show_password'
-        });
-    </script>
-  
 </body>
 </html>

@@ -32,7 +32,6 @@
     <![endif]-->
 </head>
 <body>
-    
     <div id="outer">
 	<div id="contain-all">
             <div class="inner">
@@ -40,13 +39,13 @@
                     <div class="width-one-whole spid-logo"><img src="img/spid-level3-logo-bb.svg" onerror="this.src='img/spid-level3-logo-bb.png'; this.onerror=null;" alt="SPID 3" /></div>
                 </div>
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-title">pubblica amministrazione</div>
+                    <div class="width-one-whole pa-title">[ NOME SERVICE PROVIDER ]</div>
                 </div>
                 <div class="grid spacer-top-1">
                     <div class="width-one-whole"><span class="spid-hr"></span></div>
                 </div>
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-message">Per accedere al servizio è necessario l'utilizzo del dispositivo per l'accesso fornito.</div>
+                    <div class="width-one-whole pa-message">[ Istruzioni per l'accesso con il dispositivo scelto ]</div>
                 </div>
                 <!-- SPID LOGIN FORM * begin * -->
                 <form name="spid-login" id="spid-login" action="#" method="post" class="grid">
@@ -60,7 +59,12 @@
                 </form>
                 <!-- SPID LOGIN FORM * end * -->
                 <div class="grid spacer-top-1">
-                    <div class="width-one-whole push-right spid-link"><a href="#">Annulla</a></div>
+                    <div class="width-one-whole push-right spid-link">
+                        <a href="#">
+                            Annulla
+                            <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
+                        </a>
+                    </div>
                 </div>
             </div>
 	    </div>
@@ -75,44 +79,6 @@
             <a href="http://www.spid.gov.it/check"><img id="spid-agid-logo" src="img/spid-agid-logo-bb.svg" onerror="this.src='img/spid-agid-logo-bb.png'; this.onerror=null;" alt="SPID - AgID Agenzia per l'Italia Digitale - Check" /></a>
         </div>
     </div>
-    
     <script src="js/jquery.min.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script>
-        document.querySelector('#spid-level1-message').onclick = function(){
-          swal({
-            title: '<img id="spid-logo" src="img/spid-uno-logo.svg" alt="SPID 1" title="Il servizio richiede l\'autenticazione SPID di Livello 1" />',
-            text: 'Il livello 1....',
-            html: true,
-            allowEscapeKey: true,
-            allowOutsideClick: true
-          });
-        };
-        
-        (function ($) {
-            $.showPassword = function (options) {
-                var settings = $.extend({
-                    field: "#password",
-                    control: "#show_password",
-                }, options);
-
-                var control = $(settings.control);
-                var field = $(settings.field)
-
-                control.bind('click', function () {
-                    if (control.is(':checked')) {
-                        field.attr('type', 'text');
-                    } else {
-                        field.attr('type', 'password');
-                    }
-              })
-            };
-            }(jQuery));
-            $.showPassword({
-            field: '#password',
-            control: '#show_password'
-        });
-    </script>
-  
 </body>
 </html>
