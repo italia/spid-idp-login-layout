@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700);
+
+html {
+	font-family: Titillium Web,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+h1,h2,h3 {
+	color: #00264d;
+}
+.main-header__spidlogo {
+	max-width: 100%;
+	width: 100px;
+	width: 10rem;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+  	margin-bottom: 100px;
+  	margin-bottom: 6rem;
+  }
+  .FixedSmall {
+  	bottom: 0;
+  	left: 0;
+  	padding-left: 32px;
+  	padding-right: 32px;
+  	padding-left: 3.2rem;
+  	padding-right: 3.2rem;
+  	right: 0;
+  	position: fixed;
+  	width: 100%;
+  }
+}

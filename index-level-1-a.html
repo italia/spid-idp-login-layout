@@ -24,7 +24,8 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/italia-web-toolkit.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/spid-login.css" />
 	<!--[if lt IE 9]>
     <script src="js/selectivizr.min.js"></script>
     <script src="js/respond.min.js"></script>
@@ -32,96 +33,57 @@
     <![endif]-->
 </head>
 <body> 
-    <div id="outer">
-	     <div id="contain-all">
-            <div class="inner">
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole spid-logo"><img src="img/spid-level1-logo-bb.svg" onerror="this.src='img/spid-level1-logo-bb.png'; this.onerror=null;" alt="SPID 1" /></div>
+    
+    <section class="main-wrapper u-layout u-layout-wide u-layoutCenter">
+        <header class="main-header u-padding-all-xxl">
+            <div class="main-header__inner Grid Grid--fill Grid--withGutter Grid--equalHeight Grid--alignMiddle">
+                <div class="u-size1of2">
+                    <div>
+                    <img src="img/spid-logo.svg" class="main-header__spidlogo"
+                    onerror="this.src='img/spid-logo.png'; this.onerror=null;" alt="SPID Logo" >
+                    </div>
                 </div>
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-title">[ NOME SERVICE PROVIDER ]</div>
+                <div class="u-size1of2">
+                    <div class="u-textRight">
+                    <span class="u-text-r-xs u-color-grey-40 u-padding-all-xs u-border-all-xxs" >LOGO IDP</span>
+                    </div>
                 </div>
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole"><span class="spid-hr"></span></div>
-                </div>
-                <!-- SPID LOGIN FORM * begin * -->
-                <form name="spid-login" id="spid-login" action="#" method="post" class="grid">
-                    <div class="width-one-whole">         
-                        <fieldset>
-                            <div>
-                                <label for="nome_utente" class="float-left label-bold">Nome utente</label>
-                                <span class="forgot-link">
-                                    <a href="#">
-                                        Nome utente dimenticato?
-                                        <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
-                                    </a>
-                                </span>
-                                <input id="nome_utente" name="nome_utente" type="text" class="input-error"><span class="clear"></span>
-                            </div>
-                            <div>
-                                <label for="password" class="float-left label-bold">Password</label>
-                                <span class="forgot-link">
-                                    <a href="#">
-                                        Password dimenticata?
-                                        <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
-                                    </a>
-                                </span>
-                                <input id="password" name="password" type="password" class="showpassword"><span class="clear"></span>
-                            </div>
-                            <div class="push-right spacer-top-2"><input id="showHide" type="checkbox" class="showpasswordcheckbox" /> <label class="showHideLabel" for="showHide">Mostra password</label></div>
-                        </fieldset>
-                        <button type="submit" class="italia-it-button italia-it-button-size-m button-spid spacer-top-1">
-                            <span class="italia-it-button-icon"><img src="img/spid-ico-circle-bb.svg" onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;" alt="" /></span>
-                            <span class="italia-it-button-text">Entra con SPID</span>
-                        </button>
+            </div><!--/main-header__inner -->
+        </header>
+        <main class="main u-layout u-layoutCenter u-sizeFull u-md-size1of2 u-lg-size1of2">
+            <article class="main-bodytext u-padding-all-xl">
+                <h1 class="u-text-r-xl u-margin-bottom-l">Entra con SPID</h1>
+                <h2 class="u-text-r-xs u-color-grey-40 u-textWeight-400">Servizio: <span class="u-color-95">[nome del servizio]</span></h2>
+
+                <form name="spid-login" id="spid-login" action="#" method="post" class="Form Form--spaced u-margin-bottom-l u-margin-top-l">
+                    <div class="Form-field">
+                        <label class="Form-label is-required u-text-r-xxs u-textWeight-400 u-color-grey-40 " for="nome_utente">Nome utente</label>
+                        <input class="Form-input u-border-top-none u-border-right-none u-border-left-none u-border-bottom-xs u-color-95 u-text-r-l u-textWeight-600" id="nome_utente" name="nome_utente" aria-required="true" required>
+                    </div>
+
+                    <div class="Form-field">
+                        <label class="Form-label is-required u-text-r-xxs u-textWeight-400 u-color-grey-40" for="password">Password</label>
+                        <input class="Form-input u-border-top-none u-border-right-none u-border-left-none u-border-bottom-xs u-color-95 u-text-r-l u-textWeight-600" id="password" name="password" aria-required="true" type="password" required>
+                    </div>
+                    <div class="u-padding-all-xs u-margin-bottom-m u-color-95 u-text-r-xxs u-textCenter">
+                        <span>Hai dimenticato le <a href="#" class="u-linkClean u-textWeight-600 u-color-50">credenziali</a>?</span> 
+                    </div>
+                    <div class="u-block u-sm-hidden u-md-hidden u-lg-hidden u-padding-all-xs u-margin-bottom-m u-color-95 u-text-r-xxs u-textCenter">
+                        <span>Non hai SPID? <a href="#" class="u-linkClean u-textWeight-600 u-color-50">Scopri di pi&ugrave;</a></span> 
+                    </div>
+                    <div class="Form-field FixedSmall u-background-white">
+                        <button type="submit" class=" u-text-xs u-sizeFull u-margin-bottom-xs u-background-50  u-color-white u-padding-all-m u-borderRadius-m u-textWeight-600">Invia</button>
+                        <button type="button" class="u-text-xs u-sizeFull u-border-all-xxs u-padding-all-m u-background-white u-color-grey-50 u-borderRadius-m u-textWeight-600">Annulla</button>
+                    </div>
+                    <div class="u-hidden u-sm-block u-md-block u-lg-block u-padding-all-xs u-margin-bottom-m u-color-95 u-text-r-xxs u-textCenter">
+                        <span>Non hai SPID? <a href="#" class="u-linkClean u-textWeight-600 u-color-50">Scopri di pi&ugrave;</a></span> 
                     </div>
                 </form>
-                <!-- SPID LOGIN FORM * end * -->
-                <div class="grid spacer-top-1">
-                    <div class="width-one-half push-left spid-link">
-                        <a href="#">
-                            Non hai Spid? Registrati 
-                            <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
-                        </a>
-                    </div>
-                    <div class="width-one-half push-right spid-link">
-                        <a href="#">
-                            Annulla 
-                            <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-	     </div>
-    </div>
-    <div id="header">
-        <div id="header-inner">
-            <img id="idp-logo" src="img/idp-logo-demo.svg" onerror="this.src='img/idp-logo-demo.png'; this.onerror=null;" alt="IDP Demo" />
-        </div>
-    </div>
-    <div id="footer">
-	<div id="footer-inner">
-            <a href="http://www.spid.gov.it/check" target="blank_"><img id="spid-agid-logo" src="img/spid-agid-logo-bb.svg" onerror="this.src='img/spid-agid-logo-bb.png'; this.onerror=null;" alt="SPID - AgID Agenzia per l'Italia Digitale - Check" /></a>
-        </div>
-    </div>    
+
+            </article>
+        </main>
+    </section>
+
     <script src="js/jquery.min.js"></script>
-    <script>
-        $(function(){
-            $(".showpassword").each(function(index,input) {
-                var $input = $(input);
-                $(".showpasswordcheckbox").click(function() {
-                    var change = $(this).is(":checked") ? "text" : "password";
-                    var rep = $("<input type='" + change + "' />")
-                    .attr("id", $input.attr("id"))
-                    .attr("name", $input.attr("name"))
-                    .attr('class', $input.attr('class'))
-                    .val($input.val())
-                    .insertBefore($input);
-                    $input.remove();
-                    $input = rep;
-                })
-            });
-        });
-    </script>
 </body>
 </html>
