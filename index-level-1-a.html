@@ -71,7 +71,7 @@
                     <div class="u-block u-sm-hidden u-md-hidden u-lg-hidden u-padding-all-xs u-margin-bottom-m u-color-95 u-text-r-xxs u-textCenter">
                         <span>Non hai SPID? <a href="#" class="u-linkClean u-textWeight-600 u-color-50">Scopri di pi&ugrave;</a></span> 
                     </div>
-                    <div class="Form-field FixedSmall u-background-white">
+                    <div class="Form-field FixedSmall u-padding-top-m u-padding-bottom-m">
                         <button type="submit" class=" u-text-xs u-sizeFull u-margin-bottom-xs u-background-50  u-color-white u-padding-all-m u-borderRadius-m u-textWeight-600">Invia</button>
                         <button type="button" class="u-text-xs u-sizeFull u-border-all-xxs u-padding-all-m u-background-white u-color-grey-50 u-borderRadius-m u-textWeight-600">Annulla</button>
                     </div>
@@ -85,5 +85,15 @@
     </section>
 
     <script src="js/jquery.min.js"></script>
+    <script>
+        var $FixedSmall = $('.FixedSmall');
+
+        $( "input" ).focusin(function() {
+          $FixedSmall.addClass('off');
+        });
+        $( "input" ).focusout(function() {
+          $FixedSmall.removeClass('off');
+        });
+    </script>
 </body>
 </html>

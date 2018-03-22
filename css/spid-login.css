@@ -3,6 +3,11 @@
 html {
 	font-family: Titillium Web,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
 }
+.main-wrapper {
+	background-image: url(../img/spid-usericon.svg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
 h1,h2,h3 {
 	color: #00264d;
 }
@@ -11,13 +16,29 @@ h1,h2,h3 {
 	width: 100px;
 	width: 10rem;
 }
+.main-header__spidlogo.v2 {
+  width: 125px;
+  width: 12.5rem;
+}
+.Form-input {
+	background-color: #fff;
+	background-color: transparent !important;
+}
 
 @media screen and (max-width: 767px) {
   html {
-  	margin-bottom: 100px;
-  	margin-bottom: 6rem;
+  	margin-bottom: 140px;
+  	margin-bottom: 8rem;
+  }
+  .main-wrapper {
+  	background-image: none;
   }
   .FixedSmall {
+  	-webkit-box-shadow: 0px -2px 5px 0px rgba(238,238,238,0.7);
+    -moz-box-shadow: 0px -2px 5px 0px rgba(238,238,238,0.7);
+    box-shadow: 0px -2px 5px 0px rgba(238,238,238,0.7);
+  	background-color: #fff;
+  	border-top: 1px solid #f5f5f0;
   	bottom: 0;
   	left: 0;
   	padding-left: 32px;
@@ -26,6 +47,12 @@ h1,h2,h3 {
   	padding-right: 3.2rem;
   	right: 0;
   	position: fixed;
+  	width: 100%;
+  }
+  .FixedSmall.off {
+  	background-color: inherit;
+  	padding: inherit;
+  	position: relative;
   	width: 100%;
   }
 }

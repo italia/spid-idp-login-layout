@@ -24,7 +24,8 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/italia-web-toolkit.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/spid-login.css" />
 	<!--[if lt IE 9]>
     <script src="js/selectivizr.min.js"></script>
     <script src="js/respond.min.js"></script>
@@ -32,60 +33,50 @@
     <![endif]-->
 </head>
 <body> 
-    <div id="outer">
-	     <div id="contain-all">
-            <div class="inner">
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole spid-logo"><img src="img/spid-level1-logo-bb.svg" onerror="this.src='img/spid-level1-logo-bb.png'; this.onerror=null;" alt="SPID 1" /></div>
-                </div>
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-title">[ NOME SERVICE PROVIDER ]</div>
-                </div>
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole"><span class="spid-hr"></span></div>
-                </div>
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole pa-message">Per accedere al servizio richiesto è necessario l'utilizzo dei seguenti dati personali:</div>
-                </div>
-                <!-- SPID LOGIN FORM * begin * -->
-                <form name="spid-login" id="spid-login" action="#" method="post" class="grid">
-                    <div class="width-one-whole">         
-                        <div class="width-one-whole pa-message">         
-                            <ul>
-                                <li>Nome</li>
-                                <li>Cognome</li>
-                                <li>Codice Fiscale</li>
-                                <li>...</li>
-                            </ul>
-                        </div>
-                        <button type="submit" class="italia-it-button italia-it-button-size-m button-spid spacer-top-3">
-                            <span class="italia-it-button-icon"><img src="img/spid-ico-circle-bb.svg" onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;" alt="" /></span>
-                            <span class="italia-it-button-text">Autorizza</span>
-                        </button>
-                    </div>
-                </form>
-                <!-- SPID LOGIN FORM * end * -->
-                <div class="grid spacer-top-1">
-                    <div class="width-one-whole push-right spid-link">
-                        <a href="#">
-                            Annulla 
-                            <img class="open-link" src="img/open-link.svg" onerror="this.src='img/open-link.png'; this.onerror=null;" alt="Si apre una nuova pagina" />
-                        </a>
+    
+    <section class="main-wrapper u-layout u-layout-wide u-layoutCenter">
+        <header class="main-header u-padding-all-xxl">
+            <div class="main-header__inner Grid Grid--fill Grid--withGutter Grid--equalHeight Grid--alignMiddle">
+                <div class="u-size1of2">
+                    <div>
+                    <img src="img/spid-logo.svg" class="main-header__spidlogo"
+                    onerror="this.src='img/spid-logo.png'; this.onerror=null;" alt="SPID Logo" >
                     </div>
                 </div>
-            </div>
-	     </div>
-    </div>
-    <div id="header">
-        <div id="header-inner">
-            <img id="idp-logo" src="img/idp-logo-demo.svg" onerror="this.src='img/idp-logo-demo.png'; this.onerror=null;" alt="IDP Demo" />
-        </div>
-    </div>
-    <div id="footer">
-	<div id="footer-inner">
-            <a href="http://www.spid.gov.it/check" target="blank_"><img id="spid-agid-logo" src="img/spid-agid-logo-bb.svg" onerror="this.src='img/spid-agid-logo-bb.png'; this.onerror=null;" alt="SPID - AgID Agenzia per l'Italia Digitale - Check" /></a>
-        </div>
-    </div>    
+                <div class="u-size1of2">
+                    <div class="u-textRight">
+                    <span class="u-text-r-xs u-color-grey-40 u-padding-all-xs u-border-all-xxs" >LOGO IDP</span>
+                    </div>
+                </div>
+            </div><!--/main-header__inner -->
+        </header>
+        <main class="main u-layout u-layoutCenter u-sizeFull u-md-size1of2 u-lg-size1of2">
+            <article class="main-bodytext u-padding-all-xl">
+                <h1 class="u-text-r-xl u-margin-bottom-l">Autorizzi l'invio dei dati?</h1>
+                <h2 class="u-text-r-xs u-color-grey-40 u-textWeight-400">I seguenti dati stanno per essere inviati al servizio: <span class="u-color-95">[nome del servizio]</span></h2>
+
+                
+            <ul class="u-margin-bottom-xl u-margin-top-xl">
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Codice Identificativo</li>
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Codice fiscale</li>
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Cognome</li>
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Nome</li>
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Sesso</li>
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Data di nascita</li>
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Provincia di nascita</li>
+                <li class="u-color-grey-60 u-textWeight-600 u-margin-bottom-xs">Luogo di nascita</li>
+            </ul>
+            <form class="u-margin-top-l">
+                <div class="Form-field FixedSmall u-padding-top-m u-padding-bottom-m ">
+                        <button type="submit" class=" u-text-xs u-sizeFull u-margin-bottom-xs u-background-50  u-color-white u-padding-all-m u-borderRadius-m u-textWeight-600">Autorizza l'invio dei dati</button>
+                        <button type="button" class="u-text-xs u-sizeFull u-border-all-xxs u-padding-all-m u-background-white u-color-grey-50 u-borderRadius-m u-textWeight-600">Annulla</button>
+                </div>
+            </form>
+            </article>
+        </main>
+    </section>
+
     <script src="js/jquery.min.js"></script>
+
 </body>
 </html>
