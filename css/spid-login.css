@@ -24,14 +24,17 @@ h1,h2,h3 {
 	background-color: #fff;
 	background-color: transparent !important;
 }
+.icon-error {
+  width: 60%;
+}
 
 @media screen and (max-width: 767px) {
-  html {
-  	margin-bottom: 140px;
-  	margin-bottom: 8rem;
-  }
   .main-wrapper {
   	background-image: none;
+    height: 110vh;
+  }
+  body.extrabuttons .main-wrapper {
+    height: 120vh;
   }
   .FixedSmall {
   	-webkit-box-shadow: 0px -2px 5px 0px rgba(238,238,238,0.7);

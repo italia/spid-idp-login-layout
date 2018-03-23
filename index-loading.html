@@ -26,21 +26,21 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="css/italia-web-toolkit.min.css" />
     <link rel="stylesheet" type="text/css" href="css/spid-login.css" />
-    <!--[if lt IE 9]>
+	<!--[if lt IE 9]>
     <script src="js/selectivizr.min.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="js/rem.min.js"></script>
     <![endif]-->
 </head>
-<body class="extrabuttons"> 
+<body> 
     
     <section class="main-wrapper u-layout u-layout-wide u-layoutCenter">
         <header class="main-header u-padding-all-xxl">
             <div class="main-header__inner Grid Grid--fill Grid--withGutter Grid--equalHeight Grid--alignMiddle">
                 <div class="u-size1of2">
                     <div>
-                    <img src="img/spid-level3-logo-bb.svg" class="main-header__spidlogo v2"
-                    onerror="this.src='img/spid-level3-logo-bb.png'; this.onerror=null;" alt="SPID Logo" >
+                    <img src="img/spid-logo.svg" class="main-header__spidlogo"
+                    onerror="this.src='img/spid-logo.png'; this.onerror=null;" alt="SPID Logo" >
                     </div>
                 </div>
                 <div class="u-size1of2">
@@ -52,43 +52,17 @@
         </header>
         <main class="main u-layout u-layoutCenter u-sizeFull u-md-size1of2 u-lg-size1of2">
             <article class="main-bodytext u-padding-all-xl">
-                <h1 class="u-text-r-xl u-margin-bottom-l">Autorizza l'accesso</h1>
-                <h2 class="u-text-r-xs u-color-grey-40 u-textWeight-400">Servizio: <span class="u-color-95">[nome del servizio]</span></h2>
+                <div class="u-textCenter">
+                <img src="img/icons/loading.svg" class="icon-error"
+                    onerror="this.src='img/icons/loading.png'; this.onerror=null;" alt="SPID Logo" >
+                </div>
+                <p class="u-text-r-xs u-color-grey-40 u-textWeight-400 u-lineHeight-l u-textCenter">Ti stiamo trasferendo al servizio da te richiesto</p>
 
-                
-            <p class="u-margin-bottom-xl u-margin-top-xl u-color-grey-60 u-lineHeight-l">
-                Inserire le istruzioni che l’utente deve seguire per autorizzare l’accesso (es. Inserisci il codice di conferma che abbiamo inviato via SMS).
-            </p>
-            <form class="Form Form--spaced u-margin-bottom-l ">
-                    <div class="Form-field">
-                        <label class="Form-label is-required u-text-r-xxs u-textWeight-400 u-color-grey-40 " for="codice_conferma">Codice di conferma</label>
-                        <input class="Form-input u-border-top-none u-border-right-none u-border-left-none u-border-bottom-xs u-color-95 u-text-r-l u-textWeight-600" id="codice_conferma" name="codice_conferma" aria-required="true" required>
-                    </div>
-                    <div class="u-padding-all-xs u-margin-bottom-m u-color-95 u-text-r-xxs u-textCenter">
-                        <span>Non hai ricevuto il codice? <a href="#" class="u-linkClean u-textWeight-600 u-color-50">Invia di nuovo.</a></span> 
-                    </div>
-                    <div class="Form-field FixedSmall u-padding-top-m u-padding-bottom-m">
-                        <button type="submit" class=" u-text-xs u-sizeFull u-margin-bottom-xs u-background-50  u-color-white u-padding-all-m u-borderRadius-m u-textWeight-600">Continua</button>
-                        <button type="button" class="u-text-xs u-margin-bottom-xs u-sizeFull u-border-all-xxs u-padding-all-m u-background-white u-color-50 u-borderRadius-m u-textWeight-600">Conferma con [mod. di autorizzazione 2]</button>
-                        <button type="button" class="u-text-xs u-sizeFull u-border-all-xxs u-padding-all-m u-background-white u-color-grey-50 u-borderRadius-m u-textWeight-600">Annulla</button>
-                    </div>
-
-                </form>
             </article>
         </main>
     </section>
 
     <script src="js/jquery.min.js"></script>
-    <script>
-        var $FixedSmall = $('.FixedSmall');
-
-        $( "input" ).focusin(function() {
-          $FixedSmall.addClass('off');
-        });
-        $( "input" ).focusout(function() {
-          $FixedSmall.removeClass('off');
-        });
-    </script>
 
 </body>
 </html>
