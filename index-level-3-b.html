@@ -56,13 +56,15 @@
                 <h2 class="u-text-r-xs u-color-grey-40 u-textWeight-400">Servizio: <span class="u-color-95">[nome del servizio]</span></h2>
 
                 
-            <p class="u-margin-bottom-xl u-margin-top-xl u-color-grey-60 u-lineHeight-l">
+            <p class="u-margin-bottom-m u-margin-top-xl u-color-grey-60 u-lineHeight-l">
                 Inserire le istruzioni che l’utente deve seguire per autorizzare l’accesso (es. Inserisci il codice di conferma che abbiamo inviato via SMS).
             </p>
             <form class="Form Form--spaced u-margin-bottom-l ">
-                    <div class="Form-field">
-                        <label class="Form-label is-required u-text-r-xxs u-textWeight-400 u-color-grey-40 " for="codice_conferma">Codice di conferma</label>
-                        <input class="Form-input u-border-top-none u-border-right-none u-border-left-none u-border-bottom-xs u-color-95 u-text-r-l u-textWeight-600" id="codice_conferma" name="codice_conferma" aria-required="true" required>
+                    <div class="Form-field form-animate-fields">
+                        <input class="Form-input u-border-top-none u-border-right-none u-border-left-none u-border-bottom-xxs u-color-95 u-text-r-l u-textWeight-600" id="codice_conferma" name="codice_conferma" aria-required="true" required>
+                        <label class="Form-label is-required u-text-r-xxs u-textWeight-400 u-color-grey-40 " for="codice_conferma">
+                        <span class="form-label-content">Codice di conferma</span>
+                        </label>
                     </div>
                     <div class="u-padding-all-xs u-margin-bottom-m u-color-95 u-text-r-xxs u-textCenter">
                         <span>Non hai ricevuto il codice? <a href="#" class="u-linkClean u-textWeight-600 u-color-50">Invia di nuovo.</a></span> 
@@ -87,6 +89,25 @@
         });
         $( "input" ).focusout(function() {
           $FixedSmall.removeClass('off');
+        });
+
+        /* animazione input */
+        $(function() {
+          var formAnimatedInput = $('.form-animate-fields .Form-input');
+          
+          formAnimatedInput.each(function() {
+            var $this = $(this);
+
+            $this.on('focus', function() {
+              $this.addClass('is-filled');
+            });
+            
+            $this.on('blur', function() {
+              if($this.val().length == 0) {
+                $this.removeClass('is-filled');
+              }
+            });
+          });
         });
     </script>
 
