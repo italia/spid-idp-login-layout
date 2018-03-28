@@ -50,7 +50,7 @@
                 </div>
             </div><!--/main-header__inner -->
         </header>
-        <main class="main u-layout u-layoutCenter u-sizeFull u-md-size1of2 u-lg-size1of2">
+        <main class="main u-layout u-layout-extrasmall u-layoutCenter ">
             <article class="main-bodytext u-padding-all-xl">
                 <h1 class="u-text-r-xl u-margin-bottom-l">Autorizza l'accesso</h1>
                 <h2 class="u-text-r-xs u-color-grey-40 u-textWeight-400">Servizio: <span class="u-color-95">[nome del servizio]</span></h2>
@@ -70,7 +70,7 @@
                         <span>Non hai ricevuto il codice? <a href="#" class="u-linkClean u-textWeight-600 u-color-50">Invia di nuovo.</a></span> 
                     </div>
                     <div class="Form-field FixedSmall u-padding-top-m u-padding-bottom-m">
-                        <button type="submit" class=" u-text-xs u-sizeFull u-margin-bottom-xs u-background-50  u-color-white u-padding-all-m u-borderRadius-m u-textWeight-600">Continua</button>
+                        <button type="submit" class=" u-text-xs u-sizeFull u-margin-bottom-xs u-background-50  u-color-white u-padding-all-m u-borderRadius-m u-textWeight-600" disabled>Continua</button>
                         <button type="button" class="u-text-xs u-margin-bottom-xs u-sizeFull u-border-all-xxs u-padding-all-m u-background-white u-color-50 u-borderRadius-m u-textWeight-600">Conferma con [mod. di autorizzazione 2]</button>
                         <button type="button" class="u-text-xs u-sizeFull u-border-all-xxs u-padding-all-m u-background-white u-color-grey-50 u-borderRadius-m u-textWeight-600">Annulla</button>
                     </div>
@@ -81,35 +81,7 @@
     </section>
 
     <script src="js/jquery.min.js"></script>
-    <script>
-        var $FixedSmall = $('.FixedSmall');
-
-        $( "input" ).focusin(function() {
-          $FixedSmall.addClass('off');
-        });
-        $( "input" ).focusout(function() {
-          $FixedSmall.removeClass('off');
-        });
-
-        /* animazione input */
-        $(function() {
-          var formAnimatedInput = $('.form-animate-fields .Form-input');
-          
-          formAnimatedInput.each(function() {
-            var $this = $(this);
-
-            $this.on('focus', function() {
-              $this.addClass('is-filled');
-            });
-            
-            $this.on('blur', function() {
-              if($this.val().length == 0) {
-                $this.removeClass('is-filled');
-              }
-            });
-          });
-        });
-    </script>
+    <script src="js/spid-login.js"></script>
 
 </body>
 </html>
