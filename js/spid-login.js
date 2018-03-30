@@ -9,6 +9,28 @@ $(window).load(function () {
 	  $FixedSmall.removeClass('off');
 	});
 
+	/* INDEX PAGE */
+	$('.Button--welcome, .Button--welcome-close').on('click', function(e) {
+		e.preventDefault();
+		var showtarget = $(this).data('showtarget');
+		var $showtarget = $(showtarget);
+		var $body = $('body');
+
+		
+		if ( $showtarget.hasClass('u-hidden') || $showtarget.hasClass('slideOutRight') ) {
+			$body.addClass('blockScroll');
+			$showtarget.removeClass('u-hidden');
+			$showtarget.removeClass('slideOutRight');
+			$showtarget.addClass('slideInRight');
+		} else {
+			$body.removeClass('blockScroll');
+			$showtarget.addClass('slideOutRight');
+			$showtarget.removeClass('slideInRight');
+		}
+
+
+	});
+
 	/* validatore minimo per form */
 	function minValidator($inputs) {
 
