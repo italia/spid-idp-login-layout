@@ -15,8 +15,23 @@ $(window).load(function () {
 		var showtarget = $(this).data('showtarget');
 		var $showtarget = $(showtarget);
 		var $body = $('body');
+		var $buttonwelcome = $('.Button--welcome');
+		var $spidanimation = $('#spid-animation');
 
 		
+		
+		if ($showtarget.is(':visible')) {
+			$buttonwelcome.fadeIn('fast');
+			$showtarget.fadeOut('fast');
+			
+		} else {
+			$buttonwelcome.fadeOut('fast');
+			$spidanimation.addClass('runAnimation');
+			$body.removeClass('blockScroll');
+			$showtarget.fadeIn('slow');
+		}
+
+		/*		
 		if ( $showtarget.hasClass('u-hidden') || $showtarget.hasClass('slideOutRight') ) {
 			$body.addClass('blockScroll');
 			$showtarget.removeClass('u-hidden');
@@ -27,6 +42,7 @@ $(window).load(function () {
 			$showtarget.addClass('slideOutRight');
 			$showtarget.removeClass('slideInRight');
 		}
+		*/
 
 
 	});
