@@ -66,10 +66,11 @@ h1,h2,h3 {
 }
 
 #spid-animation {
-  bottom:42vh;
-  right: 57vw;
+  bottom: calc(50vh - 20px);
+  height: 30px;
+  right: 50vw;
   position:fixed; 
-  transform: scale(0.1);
+  transform: scale(0.1); 
   z-index: -1;
 }
 .runAnimation {
