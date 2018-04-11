@@ -17,32 +17,64 @@ $(window).load(function () {
 		var $body = $('body');
 		var $buttonwelcome = $('.Button--welcome');
 		var $spidanimation = $('#spid-animation');
+		var $mainheader = $('#main-header');
+		var $mainheader_left = $mainheader.find('.fadeInLeft');
+		var $mainheader_right = $mainheader.find('.fadeInRight');
+		var $showtarget_in = $showtarget.find('.Providersgrid-item');
+		var $showtarget_inup = $showtarget.find('h1');
+		var $showtarget_form = $('form');
+		var $showtarget_footer = $('#non-hai-spid');
+		
+		if ($showtarget.hasClass('shown')) {
+			//$buttonwelcome.fadeIn('fast');
+			//$showtarget.hide();
+			//$showtarget.removeClass('shown');
+			$body.addClass('blockScroll');
+			$mainheader_left.addClass('fadeOutLeft');
+			$mainheader_right.addClass('fadeOutRight');
+			$showtarget_inup.each(function() {
+				$(this).removeClass('fadeInUp');
+				$(this).addClass('fadeOutDown');
+			});
+			$showtarget_in.each(function() {
+				$(this).removeClass('fadeIn');
+				$(this).addClass('fadeOut');
+			});
+			$showtarget_form.removeClass('fadeIn');
+			$showtarget_form.addClass('fadeOut');
+			$showtarget_footer.removeClass('fadeIn');
+			$showtarget_footer.addClass('fadeOut');
 
-		
-		
-		if ($showtarget.is(':visible')) {
-			$buttonwelcome.fadeIn('fast');
-			$showtarget.fadeOut('fast');
+			$showtarget.removeClass('shown');
+			$spidanimation.removeClass('runAnimation');
+			$spidanimation.addClass('runBackAnimation');
+			$buttonwelcome.fadeTo(1500,1).fadeIn(300);
+			
 			
 		} else {
 			$buttonwelcome.fadeOut('fast');
+			$spidanimation.removeClass('runBackAnimation');
 			$spidanimation.addClass('runAnimation');
-			$body.removeClass('blockScroll');
-			$showtarget.fadeIn('slow');
-		}
+			$mainheader.css('visibility','visible');
+			$mainheader_left.removeClass('fadeOutLeft');
+			$mainheader_right.removeClass('fadeOutRight');
+			$showtarget.show();
+			$showtarget_inup.each(function() {
+				$(this).removeClass('fadeOutDown');
+				$(this).addClass('fadeInUp');
+			});
+			$showtarget_in.each(function() {
+				$(this).removeClass('fadeOut');
+				$(this).addClass('fadeIn');
+			});
+			$showtarget_form.removeClass('fadeOut');
+			$showtarget_form.addClass('fadeIn');
+			$showtarget_footer.removeClass('fadeOut');
+			$showtarget_footer.addClass('fadeIn');
 
-		/*		
-		if ( $showtarget.hasClass('u-hidden') || $showtarget.hasClass('slideOutRight') ) {
-			$body.addClass('blockScroll');
-			$showtarget.removeClass('u-hidden');
-			$showtarget.removeClass('slideOutRight');
-			$showtarget.addClass('slideInRight');
-		} else {
+			$showtarget.addClass('shown');
 			$body.removeClass('blockScroll');
-			$showtarget.addClass('slideOutRight');
-			$showtarget.removeClass('slideInRight');
 		}
-		*/
 
 
 	});
