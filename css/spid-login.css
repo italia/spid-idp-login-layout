@@ -317,6 +317,63 @@ input[type="text"], input[type="password"] {
 }
 
 /* Media query */
+@media screen and (max-width: 996px) {
+.Providersgrid-wrapper {
+    margin: 0 -3.2rem;
+    padding-top: 2rem;
+    position: relative;
+  }
+  #providers.shown .Providersgrid-wrapper:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: ' ';
+    z-index: 0;
+    background-color: #F5F6F7;
+    top:0;
+    z-index: -1;
+    opacity: 0;
+    -webkit-animation:ease;
+    -webkit-animation-name: fadeInWrapper;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-fill-mode: forwards;
+    animation:ease;
+    animation-name: fadeInWrapper;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  .Providersgrid {
+    margin: 0 3.2rem !important;
+  }
+  .Providersgrid > div {
+    margin-bottom: 1rem;
+  }
+  .Providersgrid > div:nth-child(odd){
+    border-right: : 0.3em solid transparent;
+  }
+  .Providersgrid > div:nth-child(even){
+    border-left: 0.3em solid transparent;
+  }
+  .Providersgrid-item > a {
+    display: block;
+    padding: 1.5rem 2rem;
+  }
+
+  .Providersgrid-item {
+    background-color: #fff;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
 @media screen and (max-width: 767px) {
   body {
   	background-image: none;
@@ -350,62 +407,6 @@ input[type="text"], input[type="password"] {
   	width: 100%;
   }
 
-  .Providersgrid-wrapper {
-    margin: 0 -3.2rem;
-    padding-top: 2rem;
-    position: relative;
-  }
-  #providers.shown .Providersgrid-wrapper:after {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    content: ' ';
-    z-index: 0;
-    background-color: #F5F6F7;
-    top:0;
-    z-index: -1;
-    opacity: 0;
-    -webkit-animation:ease;
-    -webkit-animation-name: fadeInWrapper;
-    -webkit-animation-duration: 0.8s;
-    -webkit-animation-fill-mode: forwards;
-    animation:ease;
-    animation-name: fadeInWrapper;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-  }
-  .Providersgrid {
-    margin: 0 3.2rem !important;
-  }
-  .Providersgrid > div {
-    
-    margin-bottom: 1rem;
-  }
-  .Providersgrid > div:nth-child(odd){
-    border-right: : 0.3em solid transparent;
-  }
-  .Providersgrid > div:nth-child(even){
-    border-left: 0.3em solid transparent;
-  }
-  .Providersgrid-item > a {
-    display: block;
-    padding: 1.5rem 2rem;
-  }
-
-  .Providersgrid-item {
-    background-color: #fff;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
 
 }
 
