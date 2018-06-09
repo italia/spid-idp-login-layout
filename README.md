@@ -8,6 +8,8 @@ Le interfacce per gli Identity Provider sono rilasciate in formato html/css/java
 
 Il sistema richiede Jquery 1.8+.
 
+Il repository [new-ux-guidelines](https://github.com/italia/spid-idp-login-layout/tree/new-ux-guidelines) contiene i template aggiornati in conformità con le nuove _Linee Guida UX SPID_ non ancora entrate in vigore.
+
 ## Licenze di componenti di terze parti
 
 ## Licenze
