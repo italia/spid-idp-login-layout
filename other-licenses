@@ -1,18 +1,8 @@
 ## Licenze
 
-Il font Titillium in `css/main.min.css` è di [Accademia di Belle Arti Urbino] (http://www.campivisivi.net/titillium/) con licenza [SIL Open Font License 1.1]
+Il font Titillium in `css/spid-login.css` è di [Accademia di Belle Arti Urbino] (http://www.campivisivi.net/titillium/) con licenza [SIL Open Font License 1.1]
 
 Il file `js/jquery.min.js` è di [The jQuery Foundation] (https://jquery.com/), copyright The jQuery Foundation, con licenza [MIT].
-
-Il file `main.min.css` è di [Bourbon](http://bourbon.io/), copyright [thoughtbot](https://thoughtbot.com/), inc., con licenza [MIT].
-
-Il file `main.min.css` are from [Neat](http://neat.bourbon.io/), copyright [thoughtbot](https://thoughtbot.com/), inc., con licenza [MIT].
-
-Il file `main.min.css` are from [Bitters](http://bitters.bourbon.io/), copyright [thoughtbot](https://thoughtbot.com/), inc., con licenza [MIT].
-
-Il file `main.min.css` are from [Refills](http://refills.bourbon.io/), copyright [thoughtbot](https://thoughtbot.com/), inc., con licenza [MIT].
-
-Il file `main.min.css` è di [Normalize.css](https://github.com/necolas/normalize.css), copyright Nicolas Gallagher and Jonathan Neal,con licenza [MIT].
 
 Il file `js/rem.min.js` is from [REM unit polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill), copyright Chuck Carpenter, con licenza [MIT].
 
