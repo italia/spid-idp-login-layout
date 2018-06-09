@@ -1,9 +1,5 @@
-# SPID - Sistema Pubblico di Identità Digitale
-## Repository componenti
+![SPID - Sistema Pubblico di Identità Digitale](https://github.com/italia/spid-graphics/blob/master/spid-logos/spid-logo-b-lb.png)
 
-Per gestire l’accesso ai servizi pubblici e privati che utilizzano il sistema SPID, si rende necessario, sia per una questione di user experience che di immagine del sistema, la standardizzazione delle interfacce, della comunicazione e dell’utilizzo del logo SPID.
+# Template per interfacce Identity Provider
 
-## SPID IDP LOGIN LAYOUT
-Le interfacce per gli Identity Provider sono rilasciate in formato html/css/javascript in modo da essere facilmente implementate nel sistema di autenticazione e sono già testate sotto il profilo di accessibilità, user experience e risultano conformi alle linee guida di design per i siti della Pubblica Amministrazione.
-
-Il sistema richiede Jquery 1.8+.
+Questo repository contiene i template per le interfacce di login degli Identity Provider, aggiornati per conformità con le nuove _Linee Guida UX SPID_ non ancora entrate in vigore, che sostituiranno il documento _Note tecniche interfacce SPID_.
