@@ -351,7 +351,7 @@ input[type="text"], input[type="password"] {
     margin-bottom: 1rem;
   }
   .Providersgrid > div:nth-child(odd){
-    border-right: : 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
   }
   .Providersgrid > div:nth-child(even){
     border-left: 0.3em solid transparent;
@@ -432,6 +432,7 @@ input[type="text"], input[type="password"] {
 }
 .form-animate-fields .Form-input:focus {
   outline: none;
+  border-width: .15rem !important;
 }
 .form-animate-fields .Form-label {
   width: 100%;
@@ -458,8 +459,8 @@ input[type="text"], input[type="password"] {
 
 }
 .form-animate-fields .Form-input.is-filled + .Form-label:before {
-  -webkit-transform: translate(0, 0, 0);
-          transform:  translate(0, 0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 .form-animate-fields .Form-label:after {
   bottom: 0;
@@ -474,8 +475,8 @@ input[type="text"], input[type="password"] {
   position: relative;
   display: block;
   width: 100%;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   -webkit-transition: color 0.25s 0.25s cubic-bezier(0.7, 0, 0.3, 1), -webkit-transform 0.25s 0.05s cubic-bezier(0.7, 0, 0.3, 1);
@@ -485,8 +486,8 @@ input[type="text"], input[type="password"] {
 }
 .form-animate-fields .Form-input.is-filled + .Form-label .form-label-content {
   font-size: inherit;
-  -webkit-transform: scale(1) translate(-8px, -34px);
-          transform: scale(1) translate(-8px, -34px);
+  -webkit-transform: scale(.75) translate(-8px, -34px);
+          transform: scale(.75) translate(-8px, -34px);
 }
 /* FINE ANIMAZIONE FORM ---*/
 
@@ -745,3 +746,20 @@ input[type="text"], input[type="password"] {
   transform: translate3d(0, 100%, 0);
   }
   }
+.u-btn:not([disabled]) {
+    cursor: pointer;
+}
+.u-btn-primary {
+    color: #fff;
+    background-color: #0073e6;
+}
+.u-btn-secondary {
+    color: #0073e6;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 1px #0073e6;
+}
+.u-btn-quaternary {
+    background-color: #fcfdff;
+    color: #5c6f82;
+    box-shadow: inset 0 0 0 1px #e6e9f2;
+}
